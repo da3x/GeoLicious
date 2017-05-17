@@ -1,0 +1,40 @@
+//
+// Prefix header for all source files of the 'GeoLicious' target in the 'GeoLicious' project
+//
+
+#import <Availability.h>
+
+// Ein paar Importe brauchen wir immer wieder...
+#import "GeoDatabase.h"
+#import "GeoUtils.h"
+#import "ImageUtils.h"
+#import "ImageCache.h"
+#import "DateUtils.h"
+#import "GeoCoreData.h"
+
+#define iOS7   ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"  options:NSNumericSearch] != NSOrderedAscending)
+#define iOS8   ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"  options:NSNumericSearch] != NSOrderedAscending)
+#define iOS9   ([[[UIDevice currentDevice] systemVersion] compare:@"9.0"  options:NSNumericSearch] != NSOrderedAscending)
+#define iOS10  ([[[UIDevice currentDevice] systemVersion] compare:@"10.0" options:NSNumericSearch] != NSOrderedAscending)
+#define iPad   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define iPhone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+// https://de.foursquare.com/developers/app/R4PIPNNH0WIGL0ASSYP552HQOIBBUOZV21XWZIM4P3P2QQM1
+#define FOURSQUARE_CLIENT_ID      @"R4PIPNNH0WIGL0ASSYP552HQOIBBUOZV21XWZIM4P3P2QQM1"
+#define FOURSQUARE_CLIENT_SECRET  @"REMOVED-0000000000000000000000000000000000000000"
+#define FOURSQUARE_CALLBACK       @"geolicious://foursquare"
+#define FOURSQUARE_UNIVERSAL_LINK @"geolicious://foursquare"
+
+#define ALERT_LIMIT  3001
+#define ALERT_IMPORT 3002
+
+#define LINK_APPSTORE_FULL @"https://itunes.apple.com/us/app/geolicious/id637366170?&mt=8"
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif

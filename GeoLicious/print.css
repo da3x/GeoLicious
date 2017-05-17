@@ -1,0 +1,48 @@
+* {
+	font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+body {
+	font-size: 10pt;
+}
+
+h1 {
+	font-size: 120%;
+}
+
+h2 {
+	font-size: 100%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table * {
+	font-size: 8pt;
+}
+
+table tr:nth-child(2n+1) {
+	background: #f7f7f7;
+}
+
+table td,table th {
+	border: 1px solid #ccc;
+	padding: 1px 4px;
+}
+
+table td:nth-child(2),table td:nth-child(3) {
+	width: 1%;
+	white-space: nowrap;
+}
+
+table th.header {
+	background: #eee;
+}
+
+table th.footer {
+    font-weight: normal;
+	background: #fff;
+    border: none;
+}

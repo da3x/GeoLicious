@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8195" systemVersion="15B30a" minimumToolsVersion="Xcode 4.3">
+    <entity name="CoreDataCheckin" representedClassName="CoreDataCheckin" syncable="YES">
+        <attribute name="autoCheckin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="didFoursquare" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="left" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sectionDay" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sectionYear" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="useFacebook" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="useFoursquare" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="useTwitter" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataLocation" inverseName="checkins" inverseEntity="CoreDataLocation" syncable="YES"/>
+    </entity>
+    <entity name="CoreDataLocation" representedClassName="CoreDataLocation" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="autoCheckin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="country" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extra" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foursquareID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="locatlity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="radius" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="useFacebook" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="useFoursquare" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="useTwitter" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="checkins" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataCheckin" inverseName="location" inverseEntity="CoreDataCheckin" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreDataCheckin" positionX="-63" positionY="-135" width="128" height="240"/>
+        <element name="CoreDataLocation" positionX="-261" positionY="-187" width="135" height="300"/>
+    </elements>
+</model>

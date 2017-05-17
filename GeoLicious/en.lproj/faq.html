@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+		<meta charset="utf-8" />
+        <title>Frequently asked questions</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <h1>Frequently asked questions</h1>
+        <p>I will try to collect common questions and their answers.</p>
+
+        <ol class="nav">
+            <li><a href="#faq1">Where should I start best?</a></li>
+            <li><a href="#faq2">Can I create entries for the past?</a></li>
+            <li><a href="#faq3">How does automated check-in work?</a></li>
+            <li><a href="#faq4">Why is the check-in often somewhere else than expected?</a></li>
+            <li><a href="#faq5">Why is the smallest radius limited to 50m?</a></li>
+            <li><a href="#faq6">Is there a maximum number of automated check-ins?</a></li>
+            <li><a href="#faq7">How can I disable those notifications?</a></li>
+            <li><a href="#faq8">How does GeoLicious use Foursquare?</a></li>
+            <li><a href="#faq9">Are Foursquare checkins public?</a></li>
+            <li><a href="#faq10">What's the meaning of these small icons in the lists?</a></li>
+            <li><a href="#faq11">Why does the Facebook or Twitter sync not work?</a></li>
+        </ol>
+
+        <h2>General questions</h2>
+        <dl>
+            <dt id="faq1">Where should I start best?</dt>
+            <dd>The easiest way to collect data is to use the button to check in at the top right of the map view. There you may create and edit your first entry. Or you search on the top left of the map for specific locations and then add an entry by tapping the appropriate marker.</dd>
+
+            <dt id="faq2">Can I create entries for the past?</dt>
+            <dd>Of course. You can always tap a marker on the map and then the red check-in button in the upper right to create an entry for this place. Or you may use the search on the map to enter new places.</dd>
+        </dl>
+
+        <h2>Automated check-in</h2>
+        <dl>
+            <dt id="faq3">How does automated check-in work?</dt>
+            <dd>GeoLicious uses the so-called geo-fencing for this feature. For this purpose an entry is made ​​in iOS which defines the position and a radius. The system then triggers a signal as you enter and leave this area which the app can respond to. This is not using the full GPS signal all the time. The farther away you get from such a defined location the less iOS checks if you get closer. As a result, this feature is especially battery gently and has only a small influence on the battery life.</dd>
+            
+            <dt id="faq4">Why is the check-in often somewhere else than expected?</dt>
+            <dd>iOS checks the current position every few seconds while geo-fencing. In addition, the specification of the radius is not exact to the meter. The quality of the geo-fencing depends on several factors such as the available GPS signal, existing wireless networks and the amount of radio masts. Apple has not yet disclosed the exact operation of this feature.</dd>
+            
+            <dt id="faq5">Why is the smallest radius limited to 50m?</dt>
+            <dd>Even these 50m are rarely achieved in practice. The effective minimum range is somewhere between 50 and 100m. An even smaller radius would not trigger the necessary signal. These values ​​have resulted in real tests. The official docs of the API state the following: <em>In iOS 6, regions with a radius between 1 and 400 meters work better on iPhone 4S or later devices. (In iOS 5, regions with a radius between 1 and 150 meters work better on iPhone 4S and later devices.) On these devices, an app can expect to receive the appropriate region entered or region exited notification within 3 to 5 minutes on average, if not sooner.</em></dd>
+            
+            <dt id="faq6">Is there a maximum number of automated check-ins?</dt>
+            <dd>Yes. Unfortunately iOS currently allows a maximum of 20 active geo-fences per app. Once try to activate automated check-in at your 21st place GeoLicious will therefore generate a notification for you. The API says the following: <em>An app can register up to 20 regions at a time. In order to report region changes in a timely manner, the region monitoring service requires network connectivity.</em></dd>
+            
+            <dt id="faq7">How can I disable those notifications?</dt>
+            <dd>The notifications may be altered or disabled at all via iOS settings – as with every other app too. For some time now there are also some settings within the app itself.</dd>
+
+        </dl>
+
+        <h2>Foursquare</h2>
+        <dl>
+            <dt id="faq8">How does GeoLicious use Foursquare?</dt>
+            <dd>For some time now Foursquare supports GeoLicious by presenting known venues around you current location. For that nothing but your current location is transmitted to Foursquare. Foursquare is not able to connect those different requests to a single person – they are fully anonymous. A new feature is the active connection to your Foursquare account. If you connect your account you'll be able to sync sleected checkins to Foursquare. For this to work the selected location must come from the Foursquare database and have been enabled for Foursquare checkings. Only those checkins are connected to you person – location requests for known venues keep anonymous.</dd>
+            
+            <dt id="faq9">Are Foursquare checkins public?</dt>
+            <dd>All checkins to Foursquare are public in that way that everyone may see all recent checkins to any venue known on Foursquare. On the other hand it is not possible to scan all checkins of any single person. You'll need to make an active friend-request to achive that. From then on you'll be able to see all checkings of your friend.</dd>
+            
+            <dt id="faq10">What's the meaning of these small icons in the lists?</dt>
+            <dd>Locations that have been added from the Foursquare database are marked with a small icon. If the icon is blue and not just gray all new checkins will be synced to Foursquare if your account is still connected. Checkins with a gray Foursquare icon are marked for Foursquare synchronisation. As soon as this icon turns blue that sync has been successful. If you might not have a working internet connection at the checkin GeoLicious will try to sync your event with every start of the app for the next 24 hours. Should this not work within that time GeoLicious will give up.</dd>
+
+            <dt id="faq11">Why does the Facebook or Twitter sync not work?</dt>
+            <dd>Both links to Facebook and Twitter rely on Foursquare to be connected to these networks. You'll need to authorize Foursquare to post to these networks for these settings to work. You can do this via the Foursquare app or the web. A direct link to Facebook or Twitter is not planed at the moment.</dd>
+       
+        </dl>
+
+    </body>
+</html>

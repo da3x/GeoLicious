@@ -1,0 +1,4 @@
+/* Localized versions of Info.plist keys */
+
+"NSLocationAlwaysUsageDescription" = "GeoLicious works best if you allow it to automatically check in and out using geofencing features.";
+"NSLocationWhenInUseUsageDescription" = "Please allow GeoLicious to use location services to determine your current location. Otherwise the app won't be of much use.";

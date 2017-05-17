@@ -1,0 +1,71 @@
+<html lang="de">
+    <head>
+		<meta charset="utf-8" />
+        <title>Fragen &amp; Antworten</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <h1>Fragen &amp; Antworten</h1>
+        <p>Im Folgenden möchte ich versuchen, typische Fragen und die Antworten dazu zu sammeln.</p>
+
+        <ol class="nav">
+            <li><a href="#faq1">Womit sollte ich am besten anfangen?</a></li>
+            <li><a href="#faq2">Kann ich nachträglich Einträge vornehmen?</a></li>
+            <li><a href="#faq3">Wie funktioniert der automatische Check-In?</a></li>
+            <li><a href="#faq4">Warum ist der Check-In nie genau da, wo man ihn erwartet?</a></li>
+            <li><a href="#faq5">Warum kann ich den Radius nicht unter 50m einstellen?</a></li>
+            <li><a href="#faq6">Gibt es eine maximale Anzahl für automatische Check-Ins?</a></li>
+            <li><a href="#faq7">Wie kann ich die Benachrichtigungen abschalten?</a></li>
+            <li><a href="#faq8">Wie nutzt GeoLicious Foursquare?</a></li>
+            <li><a href="#faq9">Sind Foursquare CheckIns öffentlich?</a></li>
+            <li><a href="#faq10">Was bedeuten die kleinen Markierungen in der Liste?</a></li>
+            <li><a href="#faq11">Warum funktioniert der Link zu Facebook oder Twitter nicht?</a></li>
+        </ol>
+
+        <h2>Allgemeine Fragen</h2>
+        <dl>
+            <dt id="faq1">Womit sollte ich am besten anfangen?</dt>
+            <dd>Der einfachste Weg, Daten zu sammeln, ist, direkt auf der Karte den Check-In oben rechts zu benutzen. Darüber kannst Du deinen ersten Eintrag anlegen und bearbeiten. Alternativ kannst Du über die Suche oben links auf der Karte nach bestimmten Orten suchen und durch antippen der Nadel dann einen Eintrag dazu erfassen.</dd>
+
+            <dt id="faq2">Kann ich nachträglich Einträge vornehmen?</dt>
+            <dd>Natürlich. Du kannst jederzeit eine Markierung auf der Karte antippen und dann über den rot markierten Check-In oben rechts einen Eintrag zu diesem Ort nachtragen. Oder Du nutzt die Suche auf der Karte, um neue Orte einzutragen.</dd>
+        </dl>
+
+        <h2>Automatischer Check-In</h2>
+        <dl>
+            <dt id="faq3">Wie funktioniert der automatische Check-In?</dt>
+            <dd>GeoLicious nutzt für diese Funktion das so genannte Geo-Fencing. Dazu wird im iOS ein Eintrag vorgenommen, der die Position und einen Radius definiert. Das System löst dann beim betreten und auch verlassen dieses Gebietes ein Signal aus, auf das die App reagieren kann. Dabei wird aber nicht das volle GPS Signal dauerhaft aktiv gehalten. Je weiter man sich von einem so definierten Ort entfernt, desto seltener prüft iOS, ob man diesem näher kommt. Dadurch ist dieses Feature besonders Batterie schonend und hat nur einen geringen Einfluss auf die Akku-Laufzeit.</dd>
+            
+            <dt id="faq4">Warum ist der Check-In nie genau da, wo man ihn erwartet?</dt>
+            <dd>iOS prüft die aktuelle Position beim Geo-Fencing nur alle paar Sekunden. Darüber hinaus ist die Angabe des Radius niemals auf den Meter genau. Die Qualität des Geo-Fencing hängt von einigen Faktoren wie dem verfügbaren GPS Signal, vorhandenen WLANs und der Menge der Funkmasten ab. Die exakte Funktionsweise dieses Features hat Apple bisher nicht offen gelegt.</dd>
+            
+            <dt id="faq5">Warum kann ich den Radius nicht unter 50m einstellen?</dt>
+            <dd>Selbst diese 50m werden in der Praxis nur selten erreicht. Effektiv bewegt sich der minimale Radius zwischen 50 und 100m. Ein noch kleinerer Radius würde das notwendige Signal nicht mehr auslösen. Diese Werte haben sich bei realen Tests ergeben. Offiziell sagt die API dazu Folgendes: <em>In iOS 6, regions with a radius between 1 and 400 meters work better on iPhone 4S or later devices. (In iOS 5, regions with a radius between 1 and 150 meters work better on iPhone 4S and later devices.) On these devices, an app can expect to receive the appropriate region entered or region exited notification within 3 to 5 minutes on average, if not sooner.</em></dd>
+            
+            <dt id="faq6">Gibt es eine maximale Anzahl für automatische Check-Ins?</dt>
+            <dd>Ja. Leider erlaubt iOS aktuell maximal 20 aktive Geo-Fences pro App. Sobald Du bei dem 21. Ort versuchst, den automatischen Check-In zu aktiveren, wird GeoLicious daher einen entsprechenden Hinweis generieren. Die API sagt dazu Folgendes: <em>An app can register up to 20 regions at a time. In order to report region changes in a timely manner, the region monitoring service requires network connectivity.</em></dd>
+
+            <dt id="faq7">Wie kann ich die Benachrichtigungen abschalten?</dt>
+            <dd>Die Benachrichtigungen oder auch Mitteilungen lassen sich zentral in den Einstellungen deines iOS Gerätes umstellen oder auch ganz deaktivieren - wie bei jeder anderen App auch. Seit einiger Zeit gibt es aber auch direkt in der App Einstellungen dafür.</dd>
+            
+        </dl>
+
+        <h2>Foursquare</h2>
+        <dl>
+            <dt id="faq8">Wie nutzt GeoLicious Foursquare?</dt>
+            <dd>Seit einiger Zeit hilft Foursquare bereits beim normalen CheckIn, in dem es Dir bekannte Orte in deiner Umgebung vorschlägt. Dabei wird außer deiner aktuellen Position aber nichts persönliches an Foursquare übertragen. Foursquare ist auch nicht in der Lage, die verschiedenen Anfragen dieser Art auf eine einzelne Person zurück zu führen – sie sind absolut anonym. Neu ist, dass Du GeoLicious auch aktiv mit deinem persönlichen Foursquare Account verknüpfen kannst. Wenn Du dies tust, kannst Du ausgewählte CheckIns automatisch nach Foursquare synchronisieren. Dazu muss der jeweilige Ort aber aus der Foursquare Datenbasis stammen und zusätzlich für Foursquare aktiviert werden. Auch dann werden nur diese CheckIns mit deiner Person verknüpft – die Positions-Abfragen bleiben weiterhin anonym.</dd>
+
+            <dt id="faq9">Sind Foursquare CheckIns öffentlich?</dt>
+            <dd>Alle CheckIns in Foursquare sind in so fern öffentlich, als dass man zu jedem Ort, den man sich in Foursquare ansieht, sehen kann, wer gerade dort eingecheckt hat. Umgekehrt ist es aber bisher nicht möglich, von einem beliebigen Nutzer alle CheckIns einzusehen. Dazu muss man eine aktive Freundschafts-Anfrage an den Nutzer stellen und diese muss positiv beantwortet werden. Ab dann werden alle deine CheckIns unter deinen Freunden bekannt gemacht.</dd>
+
+            <dt id="faq10">Was bedeuten die kleinen Markierungen in der Liste?</dt>
+            <dd>Orte, die Du direkt aus der Foursquare Datenbasis hinzugefügt hast, sind mit einem Foursquare Icon markiert. Ist das Icon darüber hinaus blau statt grau, werden alle zukünftigen CheckIns automatisch auch nach Foursquare synchronisiert, wenn Du GeoLicious aktiv mit Foursquare verknüpft hast. Bei den CheckIns bedeutet eine graue Markierung, dass dieser CheckIn nach Foursquare synchronisiert werden soll. Erst wenn die Markierung blau ist, war diese Synchronisation auch erfolgreich. Solltest Du im Moment keine Internetverbindung haben, versucht GeoLicious in den nächsten 24 Stunden bei jedem Start, diesen CheckIn einzutragen. Sollte dies bis dahin nicht funktioniert haben, gibt GeoLicious auf.</dd>
+            
+            <dt id="faq11">Warum funktioniert der Link zu Facebook oder Twitter nicht?</dt>
+            <dd>Beide Einstellungen verlassen sich auf Foursquare im Hintergrund. Du musst Foursquare erlauben, in deinem Namen in diese Netzwerke posten zu dürfen, damit die Einstellungen wirksam werden. Du kannst dies in der Foursquare App oder über das Web tun. Eine direkte Verknüpfung zu Facebook oder Twitter ist aktuell nicht geplant.</dd>
+
+        </dl>
+
+
+    </body>
+</html>
