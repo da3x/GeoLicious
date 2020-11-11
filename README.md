@@ -18,8 +18,6 @@ GeoLicious has been developed to allow offline and private location tracking. It
 
 GeoLicious also allows you an active connection to Foursquare. If you like, you may sync selected locations to the Social Network. This works for manual checkins as well as automated checkins in the background and makes it easier as ever to defend your mayorship. Of course this functionality is fully optional – you may disconnect Foursquare at every time and reconnect later it desired.
 
-![Screen #1](http://a4.mzstatic.com/us/r30/Purple42/v4/dc/65/0d/dc650dc8-272d-da4a-8ecd-70826060605b/screen696x696.jpeg) ![Screen #2](http://a5.mzstatic.com/us/r30/Purple62/v4/fa/07/30/fa073063-44d9-a73c-1467-6da9a54d778f/screen696x696.jpeg)
-
 ### Current Features:
 	
 - Detailed map with all locations you've been so far.
