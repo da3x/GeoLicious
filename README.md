@@ -8,7 +8,7 @@ The app has never been a real success in terms of revenue from the AppStore. I'v
 
 Today I've decided to release the complete Xcode project and related files under MIT license. I won't invest any more time into this project myself – so feel free to adapt, improve and maintain whatever part you want.
 
-I'll keep GeoLicious available in the AppStore as it has been for years now – but I won't update it anymore.
+--I'll keep GeoLicious available in the AppStore as it has been for years now-- – but I won't update it anymore.
 
 ## Description
 
